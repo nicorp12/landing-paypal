@@ -1,3 +1,83 @@
-<section class="bg-amber-300 w-full">
-    <img src="/img/hero.jpg" alt="Imagen sacada del hero de PayPal" class="w-full h-[calc(100vh-70px)] object-cover object-bottom">
+<section class="w-full relative">
+    <!-- Fondo con gradiente y recorte diagonal para la primera parte -->
+    <div
+        class="absolute inset-0 z-10 bg-[#1f81ad] clip-diagonal-left opacity-70"
+    >
+    </div>
+    <!-- Fondo con gradiente y recorte diagonal para la segunda parte -->
+    <div
+        class="absolute inset-0 z-10 bg-[#0a316c] clip-diagonal-right opacity-70"
+    >
+    </div>
+
+    <img
+        src="/img/hero.jpg"
+        alt="Imagen sacada del hero de PayPal"
+        class="w-full h-[calc(100vh-70px)] object-cover"
+    />
+
+    <div
+        class="absolute top-0 left-0 z-20 flex w-full items-start justify-center mt-10"
+    >
+        <h1
+            class="text-white text-[42px] font-light text-center leading-[50px]"
+        >
+            La forma fácil y segura de <br /> enviar y recibir pagos en línea
+        </h1>
+    </div>
+
+    <div class="absolute top-1/2 left-0 z-20 w-full p-8 flex justify-center">
+        <div class="w-full mx-[107px] grid grid-cols-2 gap-8">
+            <div class="flex flex-col space-y-4">
+                <h2
+                    class="text-white text-center text-[40px] -mt-[120px] font-light"
+                >
+                    Vende y recibe pagos en línea
+                </h2>
+                <p class="text-white text-xl -mt-[10px]">
+                    Compra sin tarjeta en miles de sitios web en el extranjero
+                    sin tener que compartir tu información financiera.
+                    <br />
+                    <a href="#" class="font-bold underline">Más información</a>
+                    <br />
+                    <a
+                        href="#"
+                        class="bg-white text-black px-[90px] mt-10 inline-block rounded-3xl py-[12px] text-base font-semibold"
+                        >Regístrate sin costo</a
+                    >
+                </p>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <h2
+                    class="text-white text-center text-[40px] -mt-[120px] font-light"
+                >
+                    Vende y recibe pagos en línea
+                </h2>
+                <p class="text-white text-end text-xl -mt-[10px]">
+                    Vende alrededor del mundo y recibe pagos en tu sitio web,
+                    app, o correo electrónico. <a
+                        href="#"
+                        class="font-bold underline">Más información</a
+                    >
+                    <br />
+                    <a
+                        href="#"
+                        class="bg-white text-black px-[90px] mt-[68px] inline-block rounded-3xl py-[12px] text-base font-semibold"
+                        >Regístrate sin costo</a
+                    >
+                </p>
+            </div>
+        </div>
+    </div>
 </section>
+
+<style>
+    .clip-diagonal-left {
+        clip-path: polygon(0 0, 51% 0, 48% 100%, 0 100%);
+    }
+
+    /* Segundo clip diagonal, siguiendo la misma diagonal y cubriendo el espacio restante */
+    .clip-diagonal-right {
+        clip-path: polygon(51% 0, 100% 0, 100% 100%, 48% 100%);
+    }
+</style>
